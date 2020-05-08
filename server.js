@@ -12,7 +12,7 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : 'infinite-waters-16481',
       user : 'maryromeral',
       password : '',
       database : 'image-face-recognition'
@@ -24,7 +24,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => { res.send('OK') });
+app.get('/', (req, res) => { res.send('mrom.dev') });
 app.post('/signIn', (req, res) => { signIn.handleSignIn(req, res, db, bcrypt) });
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) });
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) });
