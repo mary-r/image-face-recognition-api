@@ -21,8 +21,6 @@ const db = knex({
 
 const app = express();
 
-app.use(favicon(__dirname + '/build/favicon.ico'));
-
 app.use(bodyParser.json());
 app.use(cors());
 
